@@ -9,31 +9,21 @@
   </head>
 
   <body>
-    <main class="container">
-      <h1>Welcome to Tauri</h1>
-
-      <div class="row">
-        <a href="https://tauri.app" target="_blank">
-          <img src="/assets/tauri.svg" class="logo tauri" alt="Tauri logo" />
-        </a>
-        <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-          target="_blank"
-        >
-          <img
-            src="/assets/javascript.svg"
-            class="logo vanilla"
-            alt="JavaScript logo"
-          />
-        </a>
+    <div id="titlebar" data-tauri-drag-region>
+      <span style="font-size:10px; opacity:0.7;" data-tauri-drag-region></span>
+      <div style="display:flex; gap:4px">
+        <button id="minimize" data-tauri-drag-region="false">—</button>
+        <button id="close" data-tauri-drag-region="false">✕</button>
       </div>
-      <p>Click on the Tauri logo to learn more about the framework</p>
-
-      <form class="row" id="greet-form">
-        <input id="greet-input" placeholder="Enter a name..." />
-        <button type="submit">Greet</button>
-      </form>
-      <p id="greet-msg"></p>
-    </main>
+    </div>
+    <div id="content">
+      <textarea id="text" rows="1" placeholder="Wpisz pytanie..."></textarea>
+      <div id="paste-area" data-tauri-drag-region="false">
+        <span>Wklej PrintScreen (Ctrl+V)</span>
+        <img id="preview" style="display:none"/>
+      </div>
+      <button id="send">Wyjaśnij</button>
+      <pre id="result">Odpowiedź pojawi się tutaj...</pre>
+    </div>
   </body>
 </html>

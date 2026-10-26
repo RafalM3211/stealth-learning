@@ -2,7 +2,7 @@
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "stealth",
   "version": "0.1.0",
-  "identifier": "com.cyrax.stealth",
+  "identifier": "com.stealth.app",
   "build": {
     "frontendDist": "../src"
   },
@@ -10,9 +10,15 @@
     "withGlobalTauri": true,
     "windows": [
       {
-        "title": "stealth",
-        "width": 800,
-        "height": 600
+        "label": "main",
+        "width": 120,
+        "height": 130,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "resizable": true
       }
     ],
     "security": {
